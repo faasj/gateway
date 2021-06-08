@@ -1,0 +1,55 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: semibratov ilya
+      changes:
+        - createTable:
+            tableName: functions
+            columns:
+              - column:
+                  name: function_id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: function_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: code
+                  type: clob
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: varchar(255)
+              - column:
+                  name: image
+                  type: varchar(255)
+              - column:
+                  name: create_date
+                  type: datetime
+                  constraints:
+                    nullable: false
+              - column:
+                  name: update_date
+                  type: datetime
+              - column:
+                  name: project_id
+                  type: uuid
+                  constraints:
+                    nullable: false
+              - column:
+                  name: tags
+                  type: jsonb
+              - column:
+                  name: environmentVariables
+                  type: jsonb
+              - column:
+                  name: limits
+                  type: jsonb
+              - column:
+                  name: requests
+                  type: jsonb
