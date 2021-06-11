@@ -1,6 +1,6 @@
 package com.faasj.gateway.repository;
 
-import com.faasj.gateway.dto.ProjectDto;
+import com.faasj.gateway.entity.ProjectEntity;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -8,19 +8,19 @@ import java.util.List;
 @Repository
 public class ProjectRepository {
 
-    public List<ProjectDto> getAllProjects() {
+    public List<ProjectEntity> getAllProjects() {
         return null;
     }
 
-    public ProjectDto getProjectById() {
+    public ProjectEntity getProjectById() {
         return null;
     }
 
-    public ProjectDto create() {
+    public ProjectEntity create() {
         return null;
     }
 
-    public ProjectDto delete() {
+    public ProjectEntity delete() {
         return null;
     }
 }

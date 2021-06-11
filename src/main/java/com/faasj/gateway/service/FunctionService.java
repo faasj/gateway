@@ -1,6 +1,6 @@
 package com.faasj.gateway.service;
 
-import com.faasj.gateway.dto.FunctionDto;
+import com.faasj.gateway.entity.FunctionEntity;
 import com.faasj.gateway.repository.FunctionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,19 +13,19 @@ public class FunctionService {
     @Autowired
     private FunctionRepository functionRepository;
 
-    public List<FunctionDto> getAllFunctions() {
+    public List<FunctionEntity> getAllFunctions() {
         return functionRepository.getAll();
     }
 
-    public FunctionDto getFunctionById() {
+    public FunctionEntity getFunctionById() {
         return functionRepository.getById();
     }
 
-    public FunctionDto create() {
+    public FunctionEntity create() {
         return functionRepository.create();
     }
 
-    public FunctionDto delete() {
+    public FunctionEntity delete() {
         return functionRepository.delete();
     }
 }

@@ -1,6 +1,6 @@
 package com.faasj.gateway.repository;
 
-import com.faasj.gateway.dto.FunctionDto;
+import com.faasj.gateway.entity.FunctionEntity;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -8,19 +8,19 @@ import java.util.List;
 @Repository
 public class FunctionRepository {
 
-    public List<FunctionDto> getAll() {
+    public List<FunctionEntity> getAll() {
         return null;
     }
 
-    public FunctionDto getById() {
+    public FunctionEntity getById() {
         return null;
     }
 
-    public FunctionDto create() {
+    public FunctionEntity create() {
         return null;
     }
 
-    public FunctionDto delete() {
+    public FunctionEntity delete() {
         return null;
     }
 }
