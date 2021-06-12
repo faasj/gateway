@@ -1,31 +1,24 @@
 package com.faasj.gateway.service;
 
 import com.faasj.gateway.entity.FunctionEntity;
-import com.faasj.gateway.repository.FunctionRepository;
+import com.faasj.gateway.repository.FunctionRepositoryInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.UUID;
 
 @Service
 public class FunctionService {
 
     @Autowired
-    private FunctionRepository functionRepository;
+    private FunctionRepositoryInterface functionRepository;
 
-    public List<FunctionEntity> getAllFunctions() {
-        return functionRepository.getAll();
+    public void delete(UUID functionId) {
+        functionRepository.deleteById(functionId);
     }
 
-    public FunctionEntity getFunctionById() {
-        return functionRepository.getById();
+    public void save(FunctionEntity functionEntity) {
+        functionRepository.save(functionEntity);
     }
 
-    public FunctionEntity create() {
-        return functionRepository.create();
-    }
-
-    public FunctionEntity delete() {
-        return functionRepository.delete();
-    }
 }
