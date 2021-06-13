@@ -1,8 +1,11 @@
 package com.faasj.gateway.repository;
 
+import com.faasj.gateway.entity.FunctionEntity;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public class FunctionRepository {
+import java.util.UUID;
 
+@Repository
+public interface FunctionRepository extends CrudRepository<FunctionEntity, UUID> {
 }
