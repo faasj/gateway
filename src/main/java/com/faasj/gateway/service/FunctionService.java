@@ -2,39 +2,20 @@ package com.faasj.gateway.service;
 
 import com.faasj.gateway.dto.FunctionDto;
 import com.faasj.gateway.entity.FunctionEntity;
-import com.faasj.gateway.repository.FunctionRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
-@Service
-public class FunctionService {
+public interface FunctionService {
 
-    @Autowired
-    private FunctionRepository functionRepository;
+    void delete(UUID functionId);
 
-    public void delete(UUID functionId) {
-        functionRepository.deleteById(functionId);
-    }
+    void save(FunctionDto functionDto);
 
-    public void save(FunctionDto functionDto) {
-        FunctionEntity entity = FunctionEntity.builder()
-                .functionId(UUID.randomUUID())
-                .functionName(functionDto.getName())
-                .code(functionDto.getCode())
-                .description(functionDto.getDescription())
-                .image(functionDto.getImage())
-                .createDate(LocalDateTime.now())
-                .updateDate(LocalDateTime.now())
-                .projectId(functionDto.getProjectId())
-                .tags(functionDto.getTags())
-                .environmentVariables(functionDto.getEnvironmentVariables())
-                .limits(functionDto.getLimits())
-                .requests(functionDto.getRequests())
-                .build();
-        functionRepository.save(entity);
-    }
+    void update(FunctionEntity functionEntity);
 
+    List<FunctionEntity> getAll();
+
+    Optional<FunctionEntity> getById(UUID functionId);
 }
