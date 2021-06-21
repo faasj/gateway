@@ -41,7 +41,6 @@ public class ProjectServiceImpl implements ProjectService {
         ProjectEntity projectEntity = ProjectEntity.builder()
                 .projectId(projectDto.getProjectId())
                 .projectName(projectDto.getName())
-                .createDate(LocalDateTime.now())
                 .updateDate(LocalDateTime.now())
                 .ownerId(projectDto.getOwnerId())
                 .tags(projectDto.getTags())
