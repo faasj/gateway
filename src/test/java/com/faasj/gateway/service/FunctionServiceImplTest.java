@@ -4,7 +4,9 @@ import com.faasj.gateway.GatewayApplicationTests;
 import com.faasj.gateway.dto.FunctionDto;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import java.util.*;
+
+import java.util.Map;
+import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
 
