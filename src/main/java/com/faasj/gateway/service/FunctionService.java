@@ -13,9 +13,9 @@ public interface FunctionService {
 
     void save(FunctionDto functionDto);
 
-    void update(FunctionEntity functionEntity);
+    void update(FunctionDto functionDto);
 
-    List<FunctionEntity> getAll();
+    List<FunctionDto> getAll();
 
-    Optional<FunctionEntity> getById(UUID functionId);
+    Optional<FunctionDto> get(UUID functionId);
 }

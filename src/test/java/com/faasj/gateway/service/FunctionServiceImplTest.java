@@ -27,20 +27,20 @@ class FunctionServiceImplTest extends GatewayApplicationTests {
 
     @Test
     void testGetById() {
-        var function = service.getById(ID);
+        var function = service.get(ID);
         assertTrue(function.isPresent());
-        function.ifPresent(functionEntity -> assertEquals(ID, functionEntity.getFunctionId()));
+        function.ifPresent(functionDto -> assertEquals(ID, functionDto.getFunctionId()));
     }
 
     @Test
     void testDelete() {
-        var functionEntityBefore = service.getById(ID);
-        assertTrue(functionEntityBefore.isPresent());
+        var functionDtoBefore = service.get(ID);
+        assertTrue(functionDtoBefore.isPresent());
 
         service.delete(ID);
 
-        var functionEntityAfter = service.getById(ID);
-        assertFalse(functionEntityAfter.isPresent());
+        var functionDtoAfter = service.get(ID);
+        assertFalse(functionDtoAfter.isPresent());
     }
 
     @Test
@@ -68,12 +68,12 @@ class FunctionServiceImplTest extends GatewayApplicationTests {
     void testUpdate() {
         final String UPDATED = "updated filed";
 
-        var function = service.getById(ID).orElseThrow();
+        var function = service.get(ID).orElseThrow();
         assertNotEquals(UPDATED, function.getCode());
 
         function.setCode(UPDATED);
         service.update(function);
 
-        assertEquals(UPDATED, service.getById(ID).orElseThrow().getCode());
+        assertEquals(UPDATED, service.get(ID).orElseThrow().getCode());
     }
 }
