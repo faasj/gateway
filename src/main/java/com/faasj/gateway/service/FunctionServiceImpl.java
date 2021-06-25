@@ -3,14 +3,14 @@ package com.faasj.gateway.service;
 import com.faasj.gateway.dto.FunctionDto;
 import com.faasj.gateway.entity.FunctionEntity;
 import com.faasj.gateway.repository.FunctionRepository;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
