@@ -1,7 +1,6 @@
 package com.faasj.gateway.service;
 
 import com.faasj.gateway.dto.FunctionDto;
-import com.faasj.gateway.entity.FunctionEntity;
 
 import java.util.List;
 import java.util.Optional;
