@@ -21,6 +21,7 @@ public class FunctionDto {
     private Map<String, String> environmentVariables;
     private Map<String, String> limits;
     private Map<String, String> requests;
+    private Map<String, String> annotations;
 
     public FunctionDto(FunctionEntity functionEntity) {
         this.functionId = functionEntity.getFunctionId();
@@ -33,5 +34,6 @@ public class FunctionDto {
         this.environmentVariables = functionEntity.getEnvironmentVariables();
         this.limits = functionEntity.getLimits();
         this.requests = functionEntity.getRequests();
+        this.annotations = functionEntity.getAnnotations();
     }
 }

@@ -50,4 +50,8 @@ public class FunctionEntity {
     @Type(type = "json")
     @Column(columnDefinition = "jsonb")
     private Map<String, String> requests;
+
+    @Type(type = "json")
+    @Column(columnDefinition = "jsonb")
+    private Map<String, String> annotations;
 }

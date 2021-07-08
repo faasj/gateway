@@ -1,7 +1,6 @@
 spring:
   datasource:
-    platform: postgres
-    url: jdbc:postgresql://localhost:5432/sberfaas
+    url: jdbc:postgresql://${DATASOURCE_HOST:localhost}:5432/sberfaas
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
@@ -14,7 +13,12 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
 
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.yml
     drop-first: true
+
+baseurl:
+  deploy: http://${DEPLOY_SERVICE_NAME:localhost}:${DEPLOY_SERVICE_PORT:8080}
+

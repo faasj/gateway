@@ -38,6 +38,7 @@ public class FunctionServiceImpl implements FunctionService {
                 .environmentVariables(functionDto.getEnvironmentVariables())
                 .limits(functionDto.getLimits())
                 .requests(functionDto.getRequests())
+                .annotations(functionDto.getAnnotations())
                 .build();
         functionRepository.save(entity);
     }
@@ -56,6 +57,7 @@ public class FunctionServiceImpl implements FunctionService {
                 .environmentVariables(functionDto.getEnvironmentVariables())
                 .limits(functionDto.getLimits())
                 .requests(functionDto.getRequests())
+                .annotations(functionDto.getAnnotations())
                 .build();
         functionRepository.save(entity);
     }
