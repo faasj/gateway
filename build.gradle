@@ -30,6 +30,7 @@ dependencies {
     implementation 'org.liquibase:liquibase-core'
     implementation "io.springfox:springfox-boot-starter:${swaggerVersion}"
     implementation "com.vladmihalcea:hibernate-types-52:${hibernateTypesVersion}"
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
 
 
     runtimeOnly 'org.postgresql:postgresql'

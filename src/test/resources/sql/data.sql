@@ -10,7 +10,8 @@ values ('f28f60d9-60f7-4e13-9602-1a3fc4298d0c',
         '{"tag": "test", "tag1": "test1"}',
         '{"environmentVariables": "var", "environmentVariables1": "var1"}',
         '{"limits": "val", "limits1": "val1"}',
-        '{"requests": "request", "requests1": "request1"}');
+        '{"requests": "request", "requests1": "request1"}',
+        '{"annotation": "annotation", "annotation1": "annotation1"}');
 insert into projects
 values ('3fa85f64-5717-4562-b3fc-2c963f66afa6',
         'calc',

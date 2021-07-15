@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS functions
     environment_variables JSONB,
     limits                JSONB,
     requests              JSONB,
+    annotations           JSONB,
 
     PRIMARY KEY (function_id),
     UNIQUE (function_name)
