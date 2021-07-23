@@ -6,11 +6,15 @@ import java.util.UUID;
 
 public interface BuildService {
 
-    BuildDto buildFunction(UUID function);
+    BuildDto buildFunction(UUID functionId);
 
-    void deleteBuild(UUID build);
+    void deleteBuild(UUID buildId);
 
-    BuildDto getBuild(UUID build);
+    BuildDto getBuild(UUID buildId);
 
-    String getBuildLogs(UUID build);
+    String getBuildLogs(UUID buildId);
+
+    String getBuildLogs();
+
+    String getBuildStatus(String functionName);
 }
